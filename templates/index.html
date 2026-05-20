@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image To Sketch Converter</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Image → Pencil Sketch</h1>
+        <p>Create beautiful pencil sketches instantly</p>
+
+        <div class="upload-section">
+
+            <label class="custom-file-upload">
+                <input type="file" id="imageInput" accept="image/*">
+                Upload Image
+            </label>
+
+            <button id="cameraBtn" class="btn">
+                Open Camera
+            </button>
+
+            <button id="captureBtn" class="btn hidden">
+                Capture Image
+            </button>
+
+        </div>
+
+        <video id="video" autoplay playsinline class="hidden"></video>
+        <canvas id="canvas" class="hidden"></canvas>
+
+        <div class="preview-container">
+
+            <div class="preview-box">
+                <h3>Original Image</h3>
+                <img id="originalPreview" src="">
+            </div>
+
+            <div class="preview-box">
+                <h3>Pencil Sketch</h3>
+                <img id="sketchPreview" src="">
+            </div>
+
+        </div>
+
+        <a id="downloadBtn" class="download-btn hidden" download>
+            Download Sketch
+        </a>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

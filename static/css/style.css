@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.card h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d1d1d1;
+}
+
+.upload-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.custom-file-upload,
+.btn,
+.download-btn {
+    background: #00b894;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.custom-file-upload:hover,
+.btn:hover,
+.download-btn:hover {
+    transform: translateY(-3px);
+    background: #00d9a6;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.preview-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.preview-box {
+    background: rgba(255,255,255,0.08);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.preview-box h3 {
+    margin-bottom: 15px;
+}
+
+.preview-box img,
+video {
+    width: 100%;
+    border-radius: 12px;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+#downloadBtn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h1 {
+        font-size: 30px;
+    }
+
+    .upload-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-file-upload,
+    .btn,
+    .download-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
